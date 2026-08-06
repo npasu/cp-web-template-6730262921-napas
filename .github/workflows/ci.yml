@@ -1,5 +1,12 @@
 name: CI
-on: [push,pull_request]
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
