@@ -26,7 +26,9 @@ export function GreetForm() {
         Greeting Demo
       </div>
 
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">Say hello</h1>
+      <h1 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">
+        Say hello
+      </h1>
 
       <div className="flex flex-col gap-4">
         <label
