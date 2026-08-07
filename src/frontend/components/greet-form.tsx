@@ -23,9 +23,12 @@ export function GreetForm() {
   return (
     <article className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
       <h1 className="text-2xl font-semibold text-zinc-950">Greeting Form</h1>
-      
+
       <div className="mt-6 flex flex-col gap-4">
-        <label htmlFor="name-input" className="text-sm font-medium text-zinc-700">
+        <label
+          htmlFor="name-input"
+          className="text-sm font-medium text-zinc-700"
+        >
           Your Name
         </label>
         <input

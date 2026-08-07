@@ -9,7 +9,9 @@ describe("GreetForm Component", () => {
   it("renders input field and submit button", () => {
     render(<GreetForm />);
     expect(screen.getByLabelText(/your name/i)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /get greeting/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /get greeting/i }),
+    ).toBeInTheDocument();
   });
 
   it("fetches and displays greeting message on button click", async () => {
@@ -28,7 +30,9 @@ describe("GreetForm Component", () => {
 
     await waitFor(() => {
       expect(global.fetch).toHaveBeenCalledWith("/api/greet?name=Alice");
-      expect(screen.getByTestId("greet-result")).toHaveTextContent("Hello, Alice!");
+      expect(screen.getByTestId("greet-result")).toHaveTextContent(
+        "Hello, Alice!",
+      );
     });
   });
 });

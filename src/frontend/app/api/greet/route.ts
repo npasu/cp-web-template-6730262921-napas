@@ -9,13 +9,16 @@ export async function GET(request: Request) {
   const backendUrl = "http://127.0.0.1:3000";
 
   try {
-    const res = await fetch(`${backendUrl}/greet?name=${encodeURIComponent(name)}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${backendUrl}/greet?name=${encodeURIComponent(name)}`,
+      {
+        cache: "no-store",
+      },
+    );
     if (!res.ok) {
       return NextResponse.json(
         { error: "Backend request failed" },
-        { status: res.status }
+        { status: res.status },
       );
     }
 
@@ -25,7 +28,7 @@ export async function GET(request: Request) {
     console.error("Backend fetch error:", error);
     return NextResponse.json(
       { error: "Failed to connect to backend" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
